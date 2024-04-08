@@ -1,33 +1,83 @@
+/* Global CSS file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 0, 127; /* Bright pink text color */
+  --background-start-rgb: 0, 0, 0; /* Black background start color */
+  --background-end-rgb: 0, 0, 0; /* Black background end color */
+  --border-color: rgb(var(--foreground-rgb)); /* Pink border color */
+  --button-hover-color: rgb(255, 153, 204); /* Lighter pink color for button hover */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* AppointmentForm.css */
+.form-box {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: #000000; /* Black background for the form */
+  border: 2px solid rgb(var(--foreground-rgb)); /* Border color matches text color */
+}
+
+.custom-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color); /* Use variable for border color */
+  border-radius: 4px;
+  background-color: #ffffff; /* White background for input fields */
+  color: rgb(var(--foreground-rgb)); /* Set text color */
+}
+
+.custom-input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(var(--foreground-rgb)) !important;
+  background-color: #ffffff !important; /* Ensure autofill background is white */
+}
+
+.custom-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Styles specifically for DateTimePicker */
+.MuiPickersBasePicker-container {
+  color: rgb(var(--foreground-rgb)); /* Set text color */
+}
+
+.MuiPickersDay-daySelected {
+  background-color: rgb(var(--foreground-rgb)); /* Pink background color for selected day */
+}
+
+.form-box label {
+  margin-bottom: 10px;
+}
+
+/* Updated button styles */
+.form-box button {
+  padding: 10px 20px;
+  background-color: rgb(var(--foreground-rgb)); /* Pink button background color */
+  color: #fff; /* White button text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.form-box button:hover {
+  background-color: rgb(var(--button-hover-color)); /* Lighter pink color on hover */
+}
+
+.form-box button[type="submit"] {
+  background-color: rgb(var(--foreground-rgb)); /* Green submit button background color */
 }
