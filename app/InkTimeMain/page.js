@@ -27,7 +27,7 @@ function Page() {
       <div>
         <h1>Welcome {user.displayName}</h1>
         <Link href="/InkTimeMain/SchedulingPage">
-          Book Appointments
+          Book Appointments 12334
         </Link>
         <button onClick={handleSignOut}>Sign Out</button>
       </div>
