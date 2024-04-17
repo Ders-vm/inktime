@@ -6,7 +6,7 @@ export default function NavBar() {
         <div>
             <p>
                 <Link href="/">
-                    <p>Ink Time&nbsp;</p>  
+                Ink Time
                 </Link>
             </p>
         </div>
