@@ -1,3 +1,4 @@
+/// Appointment component
 import React from 'react';
 
 const Appointment = ({ appointment }) => {

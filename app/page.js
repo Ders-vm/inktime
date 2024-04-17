@@ -1,21 +1,13 @@
-"use client";
-import NavBar from './components/NavBar';
-import Link from 'next/link';
+import React from 'react';
 
-export default function Page() {
-    return (
-        <main>
-          <NavBar/>
-          <div>
-            <p className="text-center">Welcome to Ink Time, the best place to schedule your next tattoo appointment.</p>
-            <Link href="/SchedulingPage">
-              <p className="text-center">Schedule an Appointment</p>
-            </Link>
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Welcome to the InkTime</h1>
+      <p>Please login to continue:</p>
+      <a href="/InkTimeMain">Login</a>
+    </div>
+  );
+};
 
-
-
-
-          </div>
-        </main>
-    );
-    }
+export default HomePage;
